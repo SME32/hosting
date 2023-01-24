@@ -1,0 +1,46 @@
+body {
+  font-family: Verdana;
+}
+h2 {
+  color: #9ed97e;
+  background-color: #215703;
+  padding: 5px;
+  text-transform: uppercase;
+}
+h1 {
+  color: #4287f5;
+  text-align: center;
+}
+strong {
+  color: #fab339;
+}
+
+.col {
+  color: #b21eba;
+  font-weight: bold;
+  text-align: right;
+}
+
+#boton {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+#boton li {
+  display: inline;
+}
+#boton li a {
+  display: inline-block;
+  width: 195px;
+  height: 50px;
+  border: 1px #b00202 solid;
+  color: #b00202;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  background-color: #fdff8f;
+  font-weight: bold;
+}
+#boton li a:hover {
+  background-color: #dcde26;
+}

@@ -1,0 +1,145 @@
+body, html{
+  margin: 0px;
+  font-family: 'Lobster', cursive;
+}
+header, section, footer,#inicio {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  height: 100px;
+  background-color: rgb(203, 238, 203);
+  position:sticky;
+  top: 0;
+}
+footer {
+  height: 75px;
+  background-color: rgb(121, 82, 0);
+}
+#botonera{
+  width: 70%;
+  height: 30%;
+  float: right;
+}
+#botonera ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+#botonera ul li{
+  flex-grow: 1;
+  text-align: center;
+}
+#botonera ul li a{
+  text-decoration: none;
+  display: block;
+  background-color: rgb(73, 185, 62);
+  padding: 20px;
+  margin-top: 20px;
+  color: black;
+  border-right: 1px black solid;
+}
+#botonera ul li a:hover{
+  background-color: rgb(148, 240, 142);
+}
+#marca {
+  width: 15%;
+  height: 85%;
+  margin-top: 10px;
+  margin-left: 10px;
+  background: url(Img/Logo_arbol.png) no-repeat left;
+  background-size: contain;
+  float: left;
+}
+
+#Contenido1, #Contenido2{
+  width: 45.5%;
+}
+
+section div{
+  float: left;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+#section1{
+  background: -webkit-linear-gradient(top, #99daa2,#27cf3d);
+  height: 800px;
+  padding-top: 100px;
+}
+#section1Izquierda, #section1Derecha, #seccion1Central{
+  width: 29.5%;
+  height: 91.5%;
+  background-size: cover;
+}
+#section1Izquierda{
+  background: url(Img/Casa.png)no-repeat center;
+  border-radius: 30px 30px 0 30px;
+}
+#seccion1Central{
+  height: 80%;
+  background: url(Img/Vecindario.png)no-repeat center;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-image: url(Img/Decoracion.png) 55 1 stretch;
+}
+#section1Derecha{
+  border-radius: 30px 30px 30px 0;
+  background: url(Img/Saguridad.png)no-repeat center, url(Img/seguridad-casa.png)center no-repeat;
+}
+#section2 {
+  background: -webkit-linear-gradient(top,#27cf3d,#207c20);
+  height: 700px;
+  padding-top: 100px;
+}
+#section2 div{
+  height: 85%;
+  background-color: black;
+}
+#section3 {
+  background: -webkit-linear-gradient(top,#207c20,#7c6b20);
+  height: 900px;
+  padding-top: 100px;
+}
+#section3 div{
+  width: 45.5%;
+  height: 45%;
+  background-color: rgb(6, 136, 136);
+}
+
+#marcaP{
+  margin: 0.4%;
+  height: 90%;
+  width: 10%;
+  float: left;
+  background: url(Img/Logo_arbol_BN.png) center no-repeat;
+}
+#contacto {
+  width: 50%;
+  height: 90%;
+  background-color: rgb(104, 71, 1);
+  float: left;
+  margin-left: 20%;
+  border-radius: 0px 0px 20px 20px;
+}
+#contacto p{
+  margin-top: 4%;
+  text-align: center;
+}
+#section1 div p{
+  font-size:xx-large;
+  background-color: black;
+  color: white;
+  margin-top: 0px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#inicio{
+  height: 400px;
+  background: url(Img/Portada.png)no-repeat left;
+  background-size: cover;
+}

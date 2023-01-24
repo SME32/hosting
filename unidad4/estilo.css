@@ -1,0 +1,73 @@
+body {
+  background-color: rgb(0, 0, 0);
+}
+header, section, footer {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+}
+footer {
+  height: 75px;
+  background-color: rgba(0, 255, 255, 0.445);
+}
+
+#marca {
+  width: 25%;
+  height: 100%;
+  background-color: rgb(207, 207, 207);
+  float: left;
+}
+#botonera {
+  width: 30%;
+  height: 100%;
+  background-color: rgb(216, 39, 39);
+  float: right;
+}
+
+section div {
+  width: 45.5%;
+  background-color: brown;
+  float: left;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+#section1 {
+  background-color: rgb(20, 214, 140);
+  height: 700px;
+}
+#section1 div {
+  width: 29.5%;
+  height: 91.5%;
+}
+#section2 {
+  background-color: rgb(39, 207, 61);
+  height: 400px;
+}
+#section2 div {
+  height: 85%;
+}
+#section3 {
+  background-color: rgb(28, 125, 189);
+  height: 800px;
+}
+#section3 div {
+  height: 44.5%;
+}
+
+#marcaP {
+  width: 10%;
+  height: 100%;
+  background-color: rgb(0, 182, 182);
+  float: left;
+}
+#contacto {
+  width: 50%;
+  height: 90%;
+  background-color: rgb(0, 182, 182);
+  margin: auto;
+}
