@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="Buscaminas.css">
+    <script src="Buscaminas.js"></script>
+</head>
+<body>
+    <div id="Regresar" style="display: none;" onclick="Regre()"></div>
+    <div id="Error" onclick="MensEr()" style="display: none;">
+        <div id="Mensaje">
+            <h1 id="TituloMensaje"></h1>
+            <p id="ContenidoMensaje"></p>
+            <p id="CapturaDeError"></p>
+        </div>
+    </div>
+    <div id="menu">
+        <div class="ingre">
+            <label>Ingrese cantidad de <strong>columnas</strong><input type="number" placeholder="Del 1 al 20" id="ColI"></label>
+        </div>
+        <div class="ingre">
+            <label>Ingrese cantidad de <strong>bombas</strong><input type="number" placeholder="Mayor a 1" id="BombI"></label>
+        </div>
+        <input type="button" value="Empezar" onclick="tabla()" id="boton">
+    </div id="menu">
+    <div id="tabla" style="display: none;">
+    </div>
+</body>
+</html>

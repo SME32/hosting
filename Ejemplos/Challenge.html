@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Challenge.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <script src="Challenge.js"></script>
+    <title>Challenge</title>
+</head>
+<body>
+    <div id="Contenedor">
+        <img src="Alura.svg" alt="Logo" id="Logo">
+        <textarea placeholder="Ingrese el texto aqui" id="TextoIngresado"></textarea>
+        <div id="Botones">
+            <button id="En" onclick="Enviar(true)">Encriptar</button>
+            <button id="Des" onclick="Enviar(false)">Desencriptar</button>
+        </div>
+    </div>
+    <aside>
+        <textarea id="ParrafoConvertido" style="display: none;" readonly></textarea>
+        <div id="Texto">
+            <img src="Challenge.svg" alt="Imagen" id="Imagen">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <button id="Copiar" onclick="Copiar()">Copiar</button>
+    </aside>
+</body>
+</html>

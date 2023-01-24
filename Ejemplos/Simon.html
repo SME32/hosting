@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Simon.css">
+    <script src="Simon.js"></script>
+    <title>Simon</title>
+</head>
+<body>
+    <div class="caja">
+        <button onclick="Iniciar()">Iniciar</button>
+    </div>
+    <div class="caja" style="display: none;">
+        <div class="btn sha"></div>
+        <div class="btn sha"></div>
+        <div class="btn sha"></div>
+        <div class="btn sha"></div>
+        <div class="btn" onclick="seleccion('0')"></div>
+        <div class="btn" onclick="seleccion('1')"></div>
+        <div class="btn" onclick="seleccion('2')"></div>
+        <div class="btn" onclick="seleccion('3')"></div>
+        <div id="progreso">
+            <div id="conteo"></div>
+        </div>
+    </div>
+    <div id="bloqueo" onclick="salir()">
+        <div id="perder">
+            <h1>Perdiste</h1>
+            <p>Te equivocaste de color<br>Has hacertado <strong id="aciertos"></strong> veces</p>
+        </div>
+    </div>
+</body>
+</html>

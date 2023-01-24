@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(15, 15, 15);
+}
+
+.contenedor{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spin-btn{
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: Verdana
+}
+
+.spin-btn::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    height: 40px;
+    width: 20px;
+    background: #fff;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.contenedor .spin .num{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: var(--clr);
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 0 60%);
+    transform-origin: right bottom;
+    transform: rotate(calc(var(--i)*45deg));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.spin{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #fff;
+    transition: transform 3s ease-in-out;
+    -webkit-transition: transform 3s ease-in-out;
+    -moz-transition: transform 3s ease-in-out;
+    -ms-transition: transform 3s ease-in-out;
+    -o-transition: transform 3s ease-in-out;
+}
+
+.contenedor .spin .num span{
+    font-size: xx-large;
+    transform: rotate(45deg);
+    font-family: Verdana;
+}

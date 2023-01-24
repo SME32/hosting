@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cifrado.css">
+    <script src="Cifrado.js"></script>
+    <title>Cifrado</title>
+</head>
+<body>
+    <div id="ConfigPantalla">
+        <div>
+            <label>Base: <input id="base" type="number" value="2" min="1"></label>
+            <label>Multiplicador: <input id="multiplicador" type="number" value="3" min="1"></label>
+            <button id="Guardar" onclick="Config(false)">Guardar</button>
+        </div>
+    </div>
+    <div id="Caja">
+        <div class="Caja1">
+            <textarea id="frase"></textarea>
+            <div class="Caja2">
+                <button onclick="Cifrar()">Cifrar</button>
+                <button onclick="Decifrar()">Decifrar</button>
+            </div>
+        </div>
+        <div id="Mostrar">
+            <p id="Respuesta"></p>
+            <button id="Config" onclick="Config(true)">Config</button>
+            <button id="Copiar" onclick="Copiar()">Copiar</button>
+        </div>
+    </div>
+</body>
+</html>
