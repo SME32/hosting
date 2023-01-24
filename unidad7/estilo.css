@@ -1,0 +1,237 @@
+body, html{
+  margin: 0px;
+  font-family: 'Lobster', cursive;
+}
+header, section, footer,#inicio {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  height: 100px;
+  background-color: rgb(203, 238, 203);
+  position:sticky;
+  top: 0;
+}
+footer {
+  height: 75px;
+  background-color: rgb(121, 82, 0);
+}
+#botonera{
+  width: 700px;
+  height: 30px;
+  float: right;
+}
+#botonera ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+#botonera ul li{
+  flex-grow: 1;
+  text-align: center;
+}
+#botonera ul li a{
+  text-decoration: none;
+  display: block;
+  background-color: rgb(73, 185, 62);
+  padding: 20px;
+  margin-top: 20px;
+  color: black;
+  border-right: 1px black solid;
+}
+#botonera ul li a:hover{
+  background-color: rgb(148, 240, 142);
+}
+#marca {
+  width: 125px;
+  height: 85px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background: url(Img/Logo_arbol.png) no-repeat left;
+  background-size: contain;
+  float: left;
+}
+
+section div{
+  float: left;
+  margin-top: 29px;
+  margin-left: 29px;
+}
+
+#section1{
+  background: -webkit-linear-gradient(top, #99daa2,#27cf3d);
+  height: 800px;
+  padding-top: 100px;
+}
+#section1Izquierda, #section1Derecha, #seccion1Central{
+  width: 281px;
+  height: 742px;
+  background-size: cover;
+}
+#section1Izquierda{
+  background: url(Img/Casa.png)no-repeat center;
+  border-radius: 30px 30px 0 30px;
+}
+#seccion1Central{
+  height: 640px;
+  background: url(Img/Vecindario.png)no-repeat center;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-image: url(Img/Decoracion.png) 55 1 stretch;
+}
+#section1Derecha{
+  border-radius: 30px 30px 30px 0;
+  background: url(Img/Saguridad.png)no-repeat center, url(Img/seguridad-casa.png)center no-repeat;
+}
+#section2 {
+  background: -webkit-linear-gradient(top,#27cf3d,#207c20);
+  height: 700px;
+  padding-top: 100px;
+}
+#section2 div{
+  width: 437px;
+  height: 595px;
+  background-color:#207c20;
+}
+
+#section3 {
+  background: -webkit-linear-gradient(top,#207c20,#7c6b20);
+  height: 900px;
+  padding-top: 100px;
+}
+#section3 div{
+  width: 436px;
+  height: 405px;
+  background-color: rgb(9, 161, 161);
+}
+#cuadro3{
+  font-size: x-large;
+}
+
+#cuadro3 p{
+  font-family: Verdana;
+  margin: 10px;
+}
+
+#cuadro3 h2{
+  text-align: center;
+  background-color: rgb(6, 114, 114);
+}
+
+#marcaP{
+  margin: 4px;
+  height: 68px;
+  width: 96px;
+  float: left;
+  background: url(Img/Logo_arbol_BN.png) center no-repeat;
+}
+#contacto {
+  width: 480px;
+  height: 65px;
+  background-color: rgb(104, 71, 1);
+  float: left;
+  margin-left: 135px;
+  border-radius: 0px 0px 20px 20px;
+}
+#contacto p{
+  text-align: center;
+}
+#section1 div p{
+  font-size:xx-large;
+  background-color: black;
+  color: white;
+  margin-top: 0px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#inicio{
+  height: 400px;
+  background: url(Img/Portada.png)no-repeat center;
+  background-size: cover;
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px){
+  header, section, footer,#inicio {
+    width: 580px;
+  }
+  #inicio{
+    height: 200px;
+  }
+  #botonera{
+    width: 445px;
+  }
+  #botonera ul li a{
+    padding: 15px 10px;
+    margin-top: 25px;
+  }
+  section div{
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  #section1 div{
+    width: 180px;
+  }
+  #section2 div,#section3 div{
+    width: 275px;
+  }
+  #contacto{
+    width: 300px;
+    margin-left: 50px;
+  }
+  #cuadro3{
+    font-size:large;
+  }
+}
+@media all and (max-width: 599px){
+  header, section, footer,#inicio{
+    width: 90%;
+  }
+  #section1,#section2,#section3,footer,header{
+    height: auto;
+  }
+  #inicio{
+    height: 55px;
+    background: url(Img/Logo_arbol.png) repeat center;
+    background-size: contain;
+    float: none;
+    background-color: rgb(203, 238, 203);
+  }
+  #section1 div, #section2 div, #section3 div{
+    width: 96%;
+    float: none;
+    margin-left: 2%;
+  }
+  #section1Derecha,#section1Izquierda{
+    border-radius: 30px;
+  }
+  #section1Izquierda,#Contenido1,#cuadro1{
+    margin-top: -50px;
+  }
+  #botonera{
+    float: none;
+    margin: 0;
+    width: auto;
+  }
+  #botonera ul li a{
+    padding: 15px 0;
+    margin: 0;
+    font-size: small;
+  }
+  #contacto{
+    width: auto;
+    float: none;
+    margin: 0;
+    border-radius: 45px;
+  }
+  #contacto p{
+    padding-top: 15px;
+    margin: 0;
+  }
+  #marcaP,#marca{
+    display: none;
+  }
+}
