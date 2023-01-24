@@ -1,0 +1,621 @@
+body, html{
+  margin: 0px;
+  font-family: 'Lobster', cursive;
+  background: url(Img/Fondo.png) left, -webkit-linear-gradient(top,#99daa2,#27cf3d,rgb(104, 71, 1));
+  background-blend-mode: luminosity;
+}
+header, section, footer,#inicio {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  height: 100px;
+  background-color: rgb(203, 238, 203);
+  position:sticky;
+  top: 0;
+  z-index: 1000;
+}
+footer {
+  height: 75px;
+  background-color: rgb(121, 82, 0);
+}
+
+#inicio{
+  height: 400px;
+  background: url(Img/Portada.png)no-repeat center;
+  background-size: cover;
+}
+
+/* Header */
+#botonera{
+  width: 700px;
+  height: 30px;
+  float: right;
+}
+#botonera ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+#botonera ul li{
+  flex-grow: 1;
+  text-align: center;
+}
+#botonera ul li a{
+  text-decoration: none;
+  display: block;
+  background-color: rgb(73, 185, 62);
+  padding: 20px;
+  margin-top: 20px;
+  color: black;
+  border-right: 1px black solid;
+}
+#botonera ul li a:hover{
+  background-color: rgb(148, 240, 142);
+}
+#marca {
+  width: 125px;
+  height: 85px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background: url(Img/Logo_arbol.png) no-repeat left;
+  background-size: contain;
+  float: left;
+}
+
+/* 1° Seccion */
+#section1{
+  background: -webkit-linear-gradient(top, #99daa2,#27cf3d);
+  height: 950px;
+  padding-top: 150px;
+}
+#section1Izquierda,#seccion1Central,#section1Derecha,#section1Izquierda1,#section1Derecha1{
+  width: 281px;
+  height: 742px;
+  background-size: cover;
+  float: left;
+  margin-top: 29px;
+  margin-left: 29px;
+}
+#somb{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 30px 30px 0 30px;
+}
+#section1 a:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+/* 1° caja*/
+#section1 h2{
+  font-size:xx-large;
+  background-color: black;
+  height: 40px;
+  width: 100%;
+  color: white;
+  margin-top: 0px;
+  text-align: center;
+  border-radius: 20px;
+}
+#section1Izquierda1{
+  background: #2ead2e;
+  border-radius: 30px 30px 0 30px;
+}
+.No, .Si{
+  color: black;
+  font-family: Verdana;
+  font-size: x-large;
+  margin-top: 100px;
+}
+
+#section1Izquierda{
+  background: url(Img/Casa.png)no-repeat center;
+  border-radius: 30px 30px 0 30px;
+}
+
+/* 2° caja */
+#seccion1Central{
+  background: url(Img/Vecindario.png)no-repeat center;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-image: url(Img/Decoracion.png) 55 1 stretch;
+}
+
+/* 3° caja */
+#section1Derecha{
+  border-radius: 30px 30px 30px 0;
+  background: url(Img/Saguridad.png)no-repeat center, url(Img/seguridad-casa.png)center no-repeat;
+}
+#Seg{
+  margin-top: 185px;
+  background-color: rgb(53, 53, 53);
+  text-align: center;
+  font-family: Verdana;
+  font-size: xx-large;
+  color: white;
+}
+
+/* 2° seccion */
+#section2 {
+  background: -webkit-linear-gradient(top,#207c20,#7c6b20);
+  height: 810px;
+  padding-top: 150px;
+}
+#Contenido1,#Contenido2{
+  width: 437px;
+  height: 595px;
+  background-color:#207c20;
+  border-radius: 10px;
+  float: left;
+  margin-top: 29px;
+  margin-left: 29px;
+}
+#Contenido1{
+  text-align: center;
+}
+#Contenido1 h2{
+  width: 100%;
+  font-size: 28px;
+  border-radius: 10px 10px 0 0;
+  padding: 7px;
+  margin: 0%;
+  background-color: rgb(11, 165, 11);
+}
+#Contenido1 textarea{
+  resize: none;
+  height: 210px;
+}
+#subM{
+  width: 100%;
+  height: 80px;
+  padding: 5%;
+}
+#subM input{
+  float: left;
+}
+#subM p{
+  float: left;
+  padding: 2%;
+  margin-left: 50px;
+}
+.colBot{
+  background-color: #25c03a;
+}
+.colBot:hover{
+  background-color: #aa7a37;
+}
+
+/* 3° seccion */
+#section3 {
+  background: #207c20;
+  height: 1000px;
+  padding-top: 100px;
+}
+#section3 div{
+  width: 436px;
+  height: 405px;
+  background-color: #0d5519;
+  float: left;
+  margin-top: 29px;
+  margin-left: 29px;
+  border-radius: 10px;
+}
+
+/* 1° caja */
+#cuadro1{
+  background: url(Img/Financiacion-vivienda.png) center no-repeat;
+  background-size: cover;
+}
+#cuadro1 a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #34d434;
+  font-size: xx-large;
+  font-family: Verdana;
+}
+#cuadro1 a:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#cuadro1_1{
+  text-decoration: none;
+}
+#cuadro1_1 div{
+  background-color: #2baa2b;
+}
+#cuadro1_1 div p{
+  font-family: Verdana;
+  padding: 0 10px;
+  font-size: 30px;
+  color: black;
+}
+
+/* 2° caja */
+#cuadro2{
+  background: url('Img/Img.png') center no-repeat;
+  background-size: cover;
+}
+#cuadro2_1{
+  background: url('Img/Img1.png') center no-repeat;
+  display: none;
+  background-size: cover;
+}
+#cuadro2_2{
+  background: url('Img/Img2.png') center no-repeat;
+  display: none;
+  background-size: cover;
+}
+.cuadro22:hover{
+  cursor: pointer;
+}
+
+/* 3° caja */
+#cuadro3{
+  font-size: x-large;
+}
+#cuadro3 p{
+  font-family: Verdana;
+  margin: 10px;
+  color: #cab08e;
+}
+#cuadro3 h2{
+  text-align: center;
+  background-color: rgb(40, 179, 40);
+  border-radius: 10px 10px 0 0;
+  color: #4d4335;
+}
+
+/* 4° caja */
+#cuadro4 p{
+  font-size: x-large;
+  font-family: Verdana;
+  padding: 40px 10px;
+  color: #cab08e;
+}
+
+/* Footer */
+#marcaP{
+  margin: 4px;
+  height: 68px;
+  width: 96px;
+  float: left;
+  background: url(Img/Logo_arbol_BN.png) center no-repeat;
+}
+#contacto {
+  width: 480px;
+  height: 65px;
+  background-color: rgb(104, 71, 1);
+  float: left;
+  margin-left: 135px;
+  padding-top: 10px;
+  border-radius: 0px 0px 20px 20px;
+}
+#contacto p{
+  text-align: center;
+}
+
+#Grid{
+  padding-top: 100px;
+  background: -webkit-linear-gradient(top,#27cf3d,#207c20);
+  height: auto;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.card{
+  height: auto;
+  width: 100%;
+}
+
+#Planos1_1{
+  background: url(Img/Planos/Plano1_1.png) center/100% 100% no-repeat;
+}
+#Planos1_2{
+  background: url(Img/Planos/Plano1_2.png) center/100% 100% no-repeat;
+}
+#Planos1_3{
+  background: url(Img/Planos/Plano1_3.png) center/100% 100% no-repeat;
+}
+
+#Planos2_1{
+  background: url(Img/Planos/Plano2_1.png) center/100% 100% no-repeat;
+}
+#Planos2_2{
+  background: url(Img/Planos/Plano2_2.png) center/100% 100% no-repeat;
+}
+#Planos2_3{
+  background: url(Img/Planos/Plano2_3.png) center/100% 100% no-repeat;
+}
+
+#Planos3_1{
+  background: url(Img/Planos/Plano3_1.png) center/100% 100% no-repeat;
+}
+#Planos3_2{
+  background: url(Img/Planos/Plano3_2.png) center/100% 100% no-repeat;
+}
+#Planos3_3{
+  background: url(Img/Planos/Plano3_3.png) center/100% 100% no-repeat;
+}
+
+#col1I{
+  height: 150px;
+  background: url("Img/Planos/Casa1_1.png") center;
+  background-size: cover;
+}
+#col2I{
+  height: 150px;
+  background: url("Img/Planos/Casa1_2.png") center;
+  background-size: cover;
+}
+#col3I{
+  height: 150px;
+  background: url("Img/Planos/Casa1_3.png") center;
+  background-size: cover;
+}
+
+#col4I{
+  height: 150px;
+  background: url("Img/Planos/Casa2_1.png") center;
+  background-size: cover;
+}
+#col5I{
+  height: 150px;
+  background: url("Img/Planos/Casa2_2.png") center;
+  background-size: cover;
+}
+#col6I{
+  height: 150px;
+  background: url("Img/Planos/Casa2_3.png") center;
+  background-size: cover;
+}
+
+#col7I{
+  height: 150px;
+  background: url("Img/Planos/Casa3_1.png") center;
+  background-size: cover;
+}
+#col8I{
+  height: 150px;
+  background: url("Img/Planos/Casa3_2.png") center;
+  background-size: cover;
+}
+#col9I{
+  height: 150px;
+  background: url("Img/Planos/Casa3_3.png") center;
+  background-size: cover;
+}
+
+.Planos{
+  height: 700px;
+  width: 800px;
+}
+.dimens{
+  width: auto;
+}
+.alig{
+  justify-content: center;
+}
+
+.SM{
+  font-size: xx-small;
+}
+
+.plan{
+  background-color: #2d7c31;
+  color: #ffffff;
+  margin-top: 5px;
+}
+.plan:hover{
+  background-color: #3bbb42;
+  color: #000000;
+}
+
+.consult{
+  background-color: #727272;
+  color: #ffffff;
+  margin-top: 5px;
+  border: 2px solid transparent;
+}
+.consult:hover{
+  border: 2px solid black;
+}
+
+.Reser{
+  background-color: #12d322;
+  color: #ffffff;
+  margin-top: 5px;
+}
+.Reser:hover{
+  background-color: #00ff15;
+  color: #000000;
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px){
+  header, section, footer,#inicio {
+    width: 580px;
+  }
+  #inicio{
+    height: 200px;
+  }
+  #botonera{
+    width: 445px;
+  }
+  #botonera ul li a{
+    padding: 15px 0px;
+    margin-top: 23px;
+  }
+  #section1 div,#section2 div,#section3 div{
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  #section1 div{
+    width: 180px;
+  }
+  #section2 div,#section3 div{
+    width: 275px;
+  }
+  #contacto{
+    width: 300px;
+    margin-left: 50px;
+  }
+  #cuadro3{
+    font-size:large;
+  }
+  #Seg{
+    margin-top: 210px;
+    font-size:x-large;
+  }
+  .No, .Si{
+    font-size: large;
+    margin-top: 50px;
+  }
+  #cuadro1{
+    background: url(Img/Financiacion-vivienda1.png) center no-repeat;
+    background-size: cover;
+  }
+  #cuadro1_1 div p{
+    font-size: large;
+    padding: 90px 15px;
+  }
+  #cuadro4 p{
+    font-size: large;
+    padding: 40px 10px;
+  }
+  #cuadro2, #cuadro2_1, #cuadro2_2{
+    background-size: 140% 100%;
+    background-position: -35px;
+  }
+  #subM{
+    padding: 0;
+    margin: 0;
+  }
+  #subM p{
+    width: 200px;
+    margin: 0;
+  }
+  #subM input{
+    margin-top: 10px;
+  }
+
+}
+@media all and (max-width: 599px){
+  header, section, footer,#inicio{
+    width: 90%;
+  }
+  #section1,#section2,#section3,footer,header,#Grid{
+    height: auto;
+  }
+  #inicio{
+    height: 55px;
+    background: url(Img/Logo_arbol.png) repeat center;
+    background-size: contain;
+    float: none;
+    background-color: rgb(203, 238, 203);
+  }
+  #section1 div, #section2 div, #section3 div{
+    width: 96%;
+    float: none;
+    margin-left: 2%;
+  }
+  #section1Derecha,#section1Izquierda{
+    border-radius: 30px;
+  }
+  #section1Izquierda,#Contenido1,#cuadro1{
+    margin-top: -50px;
+  }
+  #botonera{
+    float: none;
+    margin: 0;
+    width: auto;
+    background-color: rgb(73, 185, 62);
+    height: auto;
+  }
+  #botonera ul{
+    display: grid;
+    gap: 0;
+  }
+  #botonera ul li a{
+    padding: 15px 8px;
+    width: auto;
+    margin: 0;
+    font-size: small;
+    border: none;
+  }
+  #a1{
+    grid-column: 1;
+    grid-row: 1;
+    border-bottom: 1px solid black;
+  }
+  #a2{
+    grid-column: 2;
+    grid-row: 1;
+    border-bottom: 1px solid black;
+  }
+  #a3{
+    grid-column: 3;
+    grid-row: 1;
+    border-bottom: 1px solid black;
+  }
+  #b1{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #b2{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #b2{
+    grid-column: 3;
+    grid-row: 2;
+  }
+  #contacto{
+    width: auto;
+    float: none;
+    margin: 0;
+    border-radius: 45px;
+  }
+  #contacto p{
+    margin: 0;
+  }
+  #marcaP,#marca{
+    display: none;
+  }
+  #cuadro1_1 div p{
+    padding: 10% 10px;
+    font-size: large;
+  }
+  #cuadro4 p{
+    padding: 10% 10px;
+    font-size: large;
+  }
+  #cuadro2, #cuadro2_1, #cuadro2_2{
+    background-position: center;
+    background-size: 100% 100%;
+  }
+  #cuadro1{
+    background: url(Img/Financiacion-vivienda2.png) center no-repeat;
+    background-size: 100% 100%;
+  }
+  #section3 div.cuadro22{
+    height: 300px;
+  }
+  #subM p{
+    margin-left: 0;
+  }
+  .Planos{
+    height: 300px;
+    width: auto;
+  }
+  .dimens{
+    width: 100%;
+  }
+
+}

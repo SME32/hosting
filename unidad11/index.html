@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidad 11</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <!-- Hoja de estilo propia -->
+        <link href="estilo.css" rel="stylesheet">
+        <!-- Fuente de google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+         <!-- Cuestionario -->
+        <script type="text/javascript" src="unidad7.js"></script>
+    </head>
+    <body>
+        <div id="inicio"></div>
+        <header>
+            <div id="marca"></div>
+            <nav id="botonera">
+                <ul>
+                    <li id="a1"><a href="#inicio">Inicio</a></li>
+                    <li id="a2"><a href="#section1">Informacion</a></li>
+                    <li id="a3"><a href="#Grid">Viviendas</a></li>
+                    <li id="b1"><a href="#section3">Finanzacion</a></li>
+                    <li id="b3"><a href="#section2">Consultas</a></li>
+                    <li id="b2"><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="section1">
+            
+                <div id="section1Izquierda">
+                    <a id="somb" onclick="verI()">
+                        <h2 class="titulo">Viviendas</h2>
+                    </a>
+                </div>
+                <a onclick="verI()">
+                    <div id="section1Izquierda1" style="display: none;">
+                            <h2 class="titulo">Disponibles</h2>
+                            <ul class="No">
+                                <li>Terreno: 200 m2</li>
+                                <li>Baño: 1</li>
+                                <li>Dormitorios: 2</li>
+                            </ul>
+                            <p class="No">Posee patio delantero y trasero, Cocina, Comedor, los dormitorios estan en el 1° piso, tanque de agua de 500L, cochera para un auto</p>
+                            <ul class="Si">
+                                <li>Terreno: 300 m2</li>
+                                <li>Baños: 2</li>
+                                <li>Dormitorios: 3</li>
+                            </ul>
+                            <p class="Si">Posee patio delantero y trasero, Cocina, Comedor, los dormitorios estan en el 1° piso, un baño en la planta baja y otro en el 1° piso, tanque de agua de 500L, cochera para dos auto</p>
+                    </div>
+                </a>
+
+            <div id="seccion1Central"><h2>Terrenos</h2></div>
+
+            <a onclick="verD()">
+                <div id="section1Derecha">
+                    <h2>Seguridad</h2>
+                    <p id="Seg" style="display:none;">Seguridad privada, camaras de vigilancia monitoreadas las 24hs, alarma vecinal y sensores de movimiento</p>
+                </div>
+            </a>
+        </section>
+
+        <section id="Grid">
+            <!-- Modal -->
+            <div class="modal fade" id="Error" tabindex="-1" aria-labelledby="ErrorLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ErrorLabel">Error</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        No se puede procesar la operacion en este momento.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Modal - plano1 -->
+            <div class="modal fade" id="PlanosC1" tabindex="-1" aria-labelledby="Planos1Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered alig">
+                    <div class="modal-content dimens">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Planos1Label">Planos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="Planos1_1" class="container Planos"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal - plano2 -->
+            <div class="modal fade" id="PlanosC2" tabindex="-1" aria-labelledby="Planos2Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered alig">
+                    <div class="modal-content dimens">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Planos2Label">Planos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="Planos1_2" class="container Planos"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal - plano3 -->
+            <div class="modal fade" id="PlanosC3" tabindex="-1" aria-labelledby="Planos3Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered alig">
+                    <div class="modal-content dimens">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Planos3Label">Planos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="Planos1_3" class="container Planos"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal - plano4 -->
+            <div class="modal fade" id="PlanosC4" tabindex="-1" aria-labelledby="Planos4Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered alig">
+                    <div class="modal-content dimens">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Planos4Label">Planos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="Planos2_1" class="container Planos"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal - plano5 -->
+            <div class="modal fade" id="PlanosC5" tabindex="-1" aria-labelledby="Planos5Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered alig">
+                    <div class="modal-content dimens">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Planos5Label">Planos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="Planos2_2" class="container Planos"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal - plano6 -->
+            <div class="modal fade" id="PlanosC6" tabindex="-1" aria-labelledby="Planos6Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered alig">
+                    <div class="modal-content dimens">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Planos6Label">Planos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="Planos2_3" class="container Planos"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal - plano7 -->
+            <div class="modal fade" id="PlanosC7" tabindex="-1" aria-labelledby="Planos7Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered alig">
+                    <div class="modal-content dimens">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Planos7Label">Planos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="Planos3_1" class="container Planos"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal - plano8 -->
+            <div class="modal fade" id="PlanosC8" tabindex="-1" aria-labelledby="Planos8Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered alig">
+                    <div class="modal-content dimens">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Planos8Label">Planos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="Planos3_2" class="container Planos"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal - plano9 -->
+            <div class="modal fade" id="PlanosC9" tabindex="-1" aria-labelledby="Planos9Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered alig">
+                    <div class="modal-content dimens">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Planos9Label">Planos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="Planos3_3" class="container Planos"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row" id="filas">
+
+                    <div class="col-12 col-sm-6 col-lg-4 p-4">
+                        <div class="card">
+                            <div class="card-img-top" alt="Casa1_1" id="col1I"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">36.00 Americana</h5>
+                                <p class="card-text">
+                                    $2.250.000 (*) contado<br>
+                                    <span class="card-text SM">* Los precios no corresponden a la Patagonia. Si desea instalar una vivienda en la Patagonia consúltenos.</span>
+                                    <br>Entrega: $1.252.500
+                                    <br>60 cuotas de $55.320
+                                </p>
+
+                                <!-- Boton de error -->
+                                <button type="button" class="btn Reser container" data-bs-toggle="modal" data-bs-target="#Error">
+                                    Reservar ahora
+                                </button>
+                                
+                                <!-- Boton de plano -->
+                                <button type="button" class="btn plan container" data-bs-toggle="modal" data-bs-target="#PlanosC1">
+                                    Planos
+                                </button>
+
+                                <a href="#section2" class="btn consult container">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 p-4">
+                        <div class="card">
+                            <div class="card-img-top" alt="Casa1_2" id="col2I"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">28.80 Americana</h5>
+                                <p class="card-text">
+                                    $1.780.000 (*) contado<br>
+                                    <span class="card-text SM">* Los precios no corresponden a la Patagonia. Si desea instalar una vivienda en la Patagonia consúltenos.</span>
+                                    <br>Entrega: $1.002.500
+                                    <br>60 cuotas de $44.280
+                                </p>
+
+                                <!-- Boton de error -->
+                                <button type="button" class="btn Reser container" data-bs-toggle="modal" data-bs-target="#Error">
+                                    Reservar ahora
+                                </button>
+                                <!-- Boton de plano -->
+                                <button type="button" class="btn plan container" data-bs-toggle="modal" data-bs-target="#PlanosC2">
+                                    Planos
+                                </button>
+
+                                <a href="#section2" class="btn consult container">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 p-4">
+                        <div class="card">
+                            <div class="card-img-top" alt="Casa1_2" id="col3I"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">46.80 Americana</h5>
+                                <p class="card-text">
+                                    $2.890.000 (*) contado<br>
+                                    <span class="card-text SM">* Los precios no corresponden a la Patagonia. Si desea instalar una vivienda en la Patagonia consúltenos.</span>
+                                    <br>Entrega: $1.627.500
+                                    <br>60 cuotas de $71.885
+                                </p>
+
+                                <!-- Boton de error -->
+                                <button type="button" class="btn Reser container" data-bs-toggle="modal" data-bs-target="#Error">
+                                    Reservar ahora
+                                </button>
+                                
+                                <!-- Boton de plano -->
+                                <button type="button" class="btn plan container" data-bs-toggle="modal" data-bs-target="#PlanosC3">
+                                    Planos
+                                </button>
+
+                                <a href="#section2" class="btn consult container">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-lg-4 p-4">
+                        <div class="card">
+                            <div class="card-img-top" alt="Casa1_2" id="col4I"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">57.60 (con galería)</h5>
+                                <p class="card-text">
+                                    $3.900.000 (*) contado<br>
+                                    <span class="card-text SM">* Los precios no corresponden a la Patagonia. Si desea instalar una vivienda en la Patagonia consúltenos.</span>
+                                    <br>Entrega: $2.172.500
+                                    <br>60 cuotas de $95.955
+                                </p>
+
+                                <!-- Boton de error -->
+                                <button type="button" class="btn Reser container" data-bs-toggle="modal" data-bs-target="#Error">
+                                    Reservar ahora
+                                </button>
+                                
+                                <!-- Boton de plano -->
+                                <button type="button" class="btn plan container" data-bs-toggle="modal" data-bs-target="#PlanosC4">
+                                    Planos
+                                </button>
+
+                                <a href="#section2" class="btn consult container">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 p-4">
+                        <div class="card">
+                            <div class="card-img-top" alt="Casa1_2" id="col5I"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">46.80 CUBE</h5>
+                                <p class="card-text">
+                                    $3.325.000 (*) contado<br>
+                                    <span class="card-text SM">* Los precios no corresponden a la Patagonia. Si desea instalar una vivienda en la Patagonia consúltenos.</span>
+                                    <br>Entrega: $1.870.250
+                                    <br>60 cuotas de $82.605
+                                </p>
+
+                                <!-- Boton de error -->
+                                <button type="button" class="btn Reser container" data-bs-toggle="modal" data-bs-target="#Error">
+                                    Reservar ahora
+                                </button>
+                                
+                                <!-- Boton de plano -->
+                                <button type="button" class="btn plan container" data-bs-toggle="modal" data-bs-target="#PlanosC5">
+                                    Planos
+                                </button>
+
+                                <a href="#section2" class="btn consult container">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 p-4">
+                        <div class="card">
+                            <div class="card-img-top" alt="Casa1_2" id="col6I"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">69.12 (con cochera)</h5>
+                                <p class="card-text">
+                                    $5.610.000 (*) contado<br>
+                                    <span class="card-text SM">* Los precios no corresponden a la Patagonia. Si desea instalar una vivienda en la Patagonia consúltenos.</span>
+                                    <br>Entrega: $3.115.000
+                                    <br>60 cuotas de $137.600
+                                </p>
+
+                                <!-- Boton de error -->
+                                <button type="button" class="btn Reser container" data-bs-toggle="modal" data-bs-target="#Error">
+                                    Reservar ahora
+                                </button>
+                                
+                                <!-- Boton de plano -->
+                                <button type="button" class="btn plan container" data-bs-toggle="modal" data-bs-target="#PlanosC6">
+                                    Planos
+                                </button>
+
+                                <a href="#section2" class="btn consult container">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-lg-4 p-4">
+                        <div class="card">
+                            <div class="card-img-top" alt="Casa1_2" id="col7I"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">106.56 CUBE</h5>
+                                <p class="card-text">
+                                    $7.565.000 (*) contado<br>
+                                    <span class="card-text SM">* Los precios no corresponden a la Patagonia. Si desea instalar una vivienda en la Patagonia consúltenos.</span>
+                                    <br>Entrega: $4.260.000
+                                    <br>60 cuotas de $188.150
+                                </p>
+
+                                <!-- Boton de error -->
+                                <button type="button" class="btn Reser container" data-bs-toggle="modal" data-bs-target="#Error">
+                                    Reservar ahora
+                                </button>
+                                
+                                <!-- Boton de plano -->
+                                <button type="button" class="btn plan container" data-bs-toggle="modal" data-bs-target="#PlanosC7">
+                                    Planos
+                                </button>
+
+                                <a href="#section2" class="btn consult container">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 p-4">
+                        <div class="card">
+                            <div class="card-img-top" alt="Casa1_2" id="col8I"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">116.64 CUBE con Cochera</h5>
+                                <p class="card-text">
+                                    $10.110.000 (*) contado<br>
+                                    <span class="card-text SM">* Los precios no corresponden a la Patagonia. Si desea instalar una vivienda en la Patagonia consúltenos.</span>
+                                    <br>Entrega: $5.605.000
+                                    <br>60 cuotas de $247.555
+                                </p>
+
+                                <!-- Boton de error -->
+                                <button type="button" class="btn Reser container" data-bs-toggle="modal" data-bs-target="#Error">
+                                    Reservar ahora
+                                </button>
+                                
+                                <!-- Boton de plano -->
+                                <button type="button" class="btn plan container" data-bs-toggle="modal" data-bs-target="#PlanosC8">
+                                    Planos
+                                </button>
+
+                                <a href="#section2" class="btn consult container">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-4 p-4">
+                        <div class="card">
+                            <div class="card-img-top" alt="Casa1_2" id="col9I"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">120.20 CUBE con Cochera</h5>
+                                <p class="card-text">
+                                    $12.250.000 (*) contado<br>
+                                    <span class="card-text SM">* Los precios no corresponden a la Patagonia. Si desea instalar una vivienda en la Patagonia consúltenos.</span>
+                                    <br>Entrega: $6.252.500
+                                    <br>60 cuotas de $300,245
+                                </p>
+
+                                <!-- Boton de error -->
+                                <button type="button" class="btn Reser container" data-bs-toggle="modal" data-bs-target="#Error">
+                                    Reservar ahora
+                                </button>
+                                
+                                <!-- Boton de plano -->
+                                <button type="button" class="btn plan container" data-bs-toggle="modal" data-bs-target="#PlanosC9">
+                                    Planos
+                                </button>
+
+                                <a href="#section2" class="btn consult container">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3"> 
+                <div id="cuadro1">
+                    <a href="#section3" onclick="mas()">Has click aqui</a>
+                </div>
+                <a id="cuadro1_1" href="#section3" style="display: none;" onclick="mas()">
+                    <div><p>Accede a un credito hipotecari para financiar la construccion de tu casa que se asiete en un lote de tu propiedad o para financiar la compra de un terreno.<br>Contactanos<br>********@gmail.com</p></div>
+                </a>
+                <div id="cuadro2" class="cuadro22" onclick="Img()"></div>
+                <div id="cuadro2_1" class="cuadro22" onclick="Img()"></div>
+                <div id="cuadro2_2" class="cuadro22" onclick="Img()"></div>
+                <div id="cuadro3">
+                    <script>document.write("<h2>Datos del solicitante</h2><p>Nombre: "+nomUser+"</p><p>Profecion: "+prof+"</p><p>Cantidad de integrantes de la familia: "+integ+"</p><p>Son "+edades+" enores de edad y "+mayor+" mayores de edad</p><p>Prefiere los terrenos de las esquinas: <span id='esquina'>"+esquina+"</span></p>")</script>
+                </div>
+                <div id="cuadro4"><p>Viviendas Premium Quality es una empresa de vanguardia en constante evolución con el fin de mejorar la calidad y distribución de nuestras viviendas. Nuestro sistema constructivo representa lo último en construcción y tecnología. Estos son dos puntos claves para definir a nuestras empresas.</p></div>
+        </section>
+
+        <section id="section2">
+            <div id="Contenido1">
+                <h2>Formulario de contacto</h2>
+                <form action="">
+                    <input type="text" class="form-control" placeholder="Nombre *" maxlength="20" required>
+                    <input type="text" class="form-control" placeholder="Apellido *" maxlength="20" required>
+                    <input type="text" class="form-control" placeholder="Fecha de nacimiento *" id="Fecha" onfocus="cambiar(true)" onblur="cambiar(false)" required>
+                    <select class="form-control" required>
+                        <option value="X">--Seleccione provincia--</option>
+                        <option value="1">Capital Federal</option>
+                        <option value="11">Catamarca</option>
+                        <option value="9">Chaco</option>
+                        <option value="24">Chubut</option>
+                        <option value="18">Córdoba</option>
+                        <option value="13">Corrientes</option>
+                        <option value="16">Entre Ríos</option>
+                        <option value="7">Formosa</option>
+                        <option value="5">Jujuy</option>
+                        <option value="21">La Pampa</option>
+                        <option value="8">La Rioja</option>
+                        <option value="20">Mendoza</option>
+                        <option value="15">Misiones</option>
+                        <option value="22">Neuquén</option>
+                        <option value="3">Pcia. de Buenos Aires y Gran Buenos Aires (Centro)</option>
+                        <option value="2">Pcia. de Buenos Aires y Gran Buenos Aires (Norte)</option>
+                        <option value="4">Pcia. de Buenos Aires y Gran Buenos Aires (Sur)</option>
+                        <option value="23">Río Negro</option>
+                        <option value="6">Salta</option>
+                        <option value="17">San Juan</option>
+                        <option value="19">San Luis</option>
+                        <option value="25">Santa Cruz</option>
+                        <option value="14">Santa Fé</option>
+                        <option value="10">Santiago del Estero</option>
+                        <option value="26">Tierra del Fuego</option>
+                        <option value="12">Tucumán</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="Ciudad *" maxlength="20" required>
+                    <input type="email" class="form-control" placeholder="Correo electrónico *" required>
+                    <input type="tel" class="form-control" placeholder="Telefono *" maxlength="12" required>
+                    <textarea class="form-control" placeholder="Consulta"></textarea>
+                    <div id="subM">
+                        <input type="submit" class="btn colBot">
+                        <p>Los campos con * son obligatorios</p>
+                    </div>
+                </form>
+            </div>
+            <div id="Contenido2">
+            </div>
+        </section>
+
+        <footer>
+            <div id="marcaP"></div>
+            <div id="contacto">
+                <p>Email: ********@gmail.com<br>Tel: (555)555-5555</p>
+            </div>
+        </footer>
+
+        <!-- DOM -->
+        <script type="text/javascript" src="unidad8.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>
