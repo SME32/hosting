@@ -76,7 +76,6 @@ h2{
     width: 75%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-content: space-around;
     margin-left: 50px;
 }
@@ -98,19 +97,25 @@ h2,p{
     margin: 5%;
     outline:none;
 }
+#Logo{
+    margin-top: 15px;
+}
 
 @media all and (max-width: 750px){
     #Contenedor{
         width: 98%;
         min-height: 65vh;
         display: block;
-        margin: auto;
+        margin: 10px auto;
     }
     body{
         flex-wrap: wrap;
     }
-    img{
+    #Imagen{
         display: none;
+    }
+    #Logo{
+        margin-left: 10px;
     }
     aside{
         width: 98%;
