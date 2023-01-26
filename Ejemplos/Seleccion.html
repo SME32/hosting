@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Seleccion.css">
+    <title>Seleccion</title>
+</head>
+<body>
+    <div id="contenedor">
+        <div class="btn ho" onclick="seleccion(0)">
+            <img src="Img/Casa.svg" alt="Home">
+        </div>
+        <div class="btn ho" onclick="seleccion(1)">
+            <img src="Img/Imagen.svg" alt="Imagen">
+        </div>
+        <div class="btn ho" onclick="seleccion(2)">
+            <img src="Img/Puntero.svg" alt="Puntero">
+        </div>
+    </div>
+    <script>
+        function seleccion(sel){
+            let activar = document.getElementsByClassName("btn")
+            activar[sel].classList.add("seleccionado")
+            activar[sel].classList.remove("ho")
+            if (sel!=0){
+                activar[0].classList.remove("seleccionado")
+                activar[0].classList.add("ho")
+            }
+            if (sel!=1){
+                activar[1].classList.remove("seleccionado")
+                activar[1].classList.add("ho")
+            }
+            if (sel!=2){
+                activar[2].classList.remove("seleccionado")
+                activar[2].classList.add("ho")
+            }
+        }
+    </script>
+</body>
+</html>
