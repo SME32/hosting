@@ -14,53 +14,105 @@ body{
     background: rgb(179, 212, 255);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 300px;
-    height: 75px;
+    height: 85px;
     border-radius: 15px;
+    padding: 5px 10px 0 10px;
 }
-.btn{
-    width: 55px;
-    height: 55px;
+ul{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-around
+}
+ul li{
+    list-style: none;
+    z-index: 10;
+}
+ul li a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255,0.5);
+    font-size: 2em;
+}
+ul li.activar a .icon{
+    transform: translateY(-10px);
+    color: rgb(0, 0, 255);
+}
+.text{
+    position: absolute;
+    opacity: 0;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: rgb(179, 212, 255);
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transform: translateY(0px);
+}
+ul li:hover a .icon{
+    color: rgb(255, 255, 255);
+}
+ul li.activar:hover a .icon{
+    color: rgb(0, 0, 255);
+}
+ul li.activar a .text{
+    transform: translateY(13px);
+    opacity: 1;
+}
+.indicar{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 11px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.indicar::after{
+    content: "";
+    position: absolute;
+    bottom: 13px;
+    width: 110%;
+    height: 15px;
+    background: rgb(0, 0, 255);
     border-radius: 10px;
 }
-img{
-    padding: 5px;
-    height: 55px;
-    width: 55px;
-}
-.seleccionado{
-    background: rgb(0, 174, 255);
-    transform: translateY(-30px);
-    border: 3px black solid;
-    position: relative;
-}
-.seleccionado::after{
-    position: absolute;
+.indicar::before{
     content: "";
-    background: rgb(179, 212, 255);
-    height: 20px;
-    width: 20px;
-    top: 17px;
-    left: -23px;
-    border-top-right-radius: 10px;
-    box-shadow: 0px -10px rgb(20, 20, 20);
-}
-.seleccionado::before{
     position: absolute;
-    content: "";
+    top: -15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
     background: rgb(179, 212, 255);
-    height: 20px;
-    width: 20px;
-    top: 17px;
-    left: calc(100% + 3px);
-    border-top-left-radius: 10px;
-    box-shadow: 0px -10px rgb(20, 20, 20);
+    box-shadow: 0 0 0 2px rgb(0, 0, 255);
+    animation: animated 1s ease-in-out infinite;
 }
-.ho:hover{
-    background: rgb(222, 236, 255);
-    filter: opacity(70%);
+ul li:nth-child(2).activar ~ .indicar{
+    transform: translateX(calc((70px + 23px) * 1));
+}
+ul li:nth-child(3).activar ~ .indicar{
+    transform: translateX(calc((70px + 23px) * 2));
+}
+
+@keyframes animated{
+    0%, 100%{
+        transform-origin: left bottom;
+        transform: translateX(5px);
+    }
+    50%{
+        transform-origin: left bottom;
+        transform: translateX(-5px);
+}
 }
