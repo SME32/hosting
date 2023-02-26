@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(211, 211, 211);
+}
+body{
+    background: rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#contenedor{
+    width: 900px;
+    background: rgb(51, 51, 51);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+.contenido{
+    text-align: center;
+    background: rgb(20, 20, 20);
+    height: 100%;
+}
+.uno{
+    grid-column: 1 / 1;
+}
+.dos{
+    grid-column: 2 / 2;
+}
+.tres{
+    grid-column: 3 / 3;
+}
