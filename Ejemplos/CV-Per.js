@@ -1,4 +1,4 @@
-const obj = '{"name":{"first":"Martin","last":"Maiorano"},"email":"martinmaiorano32@gmail.com","location":{"country":"Argentina","city":"Mar del plata","street":{"name":"*******", "number":"----"}},"date":"1995-11-14","cell":"(223)668-9376","login":{"username":"Argentina programa 4.0","password":"En curso"},"picture":"Img/CV.png"}';
+const obj = '{"name":{"first":"Martin","last":"Maiorano"},"email":"martinmaiorano32@gmail.com","location":{"country":"Argentina","city":"Mar del plata","street":{"name":"*******", "number":"----"}},"date":"1995-11-14","cell":"(223)668-9376","login":{"title":"Argentina programa 4.0","descript":"En curso"},"picture":"Img/CV.png"}';
 const cv = JSON.parse(obj)
 console.log(cv);
 
@@ -23,7 +23,7 @@ btn[4].addEventListener("click",function(){
     document.getElementById("Texto").innerHTML = cv.cell
 })
 btn[5].addEventListener("click",function(){
-    document.getElementById("Texto").innerHTML = "Usuario: "+cv.login.username+"<br>Contraseña: "+cv.login.password
+    document.getElementById("Texto").innerHTML = "Lugar: "+cv.login.title+"<br>Estado: "+cv.login.descript
 })
 let lista = document.querySelectorAll(".list")
 function activar(){
