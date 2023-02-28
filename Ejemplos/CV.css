@@ -9,6 +9,7 @@ body {
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
+  background-color: rgb(143, 78, 78);
 }
 #opciones {
   width: 700px;
@@ -33,4 +34,8 @@ body {
   border-right: 1px black solid;
   position: relative;
   overflow: hidden;
+}
+.hola::after{
+  content: attr(data-title);
+  position: absolute;
 }
