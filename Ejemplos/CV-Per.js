@@ -1,4 +1,4 @@
-const obj = '{"name":{"first":"Martin","last":"Maiorano"},"email":"martinmaiorano32@gmail.com","location":{"country":"Argentina","city":"Mar del plata","street":{"name":"*******", "number":"----"}},"date":"1995-11-14","cell":"(223)668-9376","login":{"username":"Martin","password":"*******"},"picture":"Img/CV.png"}';
+const obj = '{"name":{"first":"Martin","last":"Maiorano"},"email":"martinmaiorano32@gmail.com","location":{"country":"Argentina","city":"Mar del plata","street":{"name":"*******", "number":"----"}},"date":"1995-11-14","cell":"(223)668-9376","login":{"username":"Argentina programa 4.0","password":"En curso"},"picture":"Img/CV.png"}';
 const cv = JSON.parse(obj)
 console.log(cv);
 
