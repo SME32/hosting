@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 body {
   display: flex;
@@ -9,33 +12,95 @@ body {
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
-  background-color: rgb(143, 78, 78);
+  background-color: rgb(240, 240, 240);
+  --color: rgb(187, 187, 187); 
 }
 #opciones {
   width: 700px;
-  height: 30px;
   float: right;
+  background-color: var(--color);
+  border-radius: 20px;
 }
 #opciones ul {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around
 }
 #opciones ul li {
   text-align: center;
 }
 #opciones ul li a {
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
-  margin-top: 20px;
-  border-right: 1px black solid;
-  position: relative;
-  overflow: hidden;
 }
-.hola::after{
-  content: attr(data-title);
+#foto{
+  width: 700px;
+  padding-top: 20px;
+  background: linear-gradient(var(--color) 35%,transparent 40%);
+  height: 250px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Texto{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column
+}
+img{
+  border-radius: 50%;
+  border: 4px solid rgb(235, 235, 235);
+  box-shadow: 1px 1px 0px black,
+  -1px -1px 0px black,
+  1px -1px 0px black,
+  -1px 1px 0px black;
+}
+.icon{
+  position: relative;
+  display: block;
+  line-height: 75px;
+  transition: 0.5s;
+  color: rgb(255, 255, 255,0.5);
+  font-size: 2em;
+}
+ul li.activar a .icon{
+  transform: translateY(-10px);
+  color: rgb(0, 0, 255);
+}
+.text{
   position: absolute;
+  opacity: 0;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: rgb(14, 84, 175);
+  transition: 0.5s;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transform: translateY(0px);
+}
+ul li:hover a .icon{
+  color: rgb(255, 255, 255);
+}
+ul li.activar:hover a .icon{
+  color: rgb(0, 0, 255);
+}
+ul li.activar a .text{
+  transform: translateY(15px);
+  opacity: 1;
+}
+
+button{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+button:hover{
+  background-color: rgb(14, 84, 175);
+  color: white;
+  border: 2px solid rgb(0, 0, 255);
 }
