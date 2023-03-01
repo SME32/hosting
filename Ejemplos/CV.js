@@ -1,6 +1,6 @@
 let cv = {}
 function rand(){
-    fetch("https:randomuser.me/api/?inc=gender,name,nat,picture,email,cell,picture,dob,location,login")
+    fetch("https://randomuser.me/api/?inc=gender,name,nat,picture,email,cell,picture,dob,location,login")
     .then((response) => response.json())
     .then(function(data){
         cv = data.results[0]
