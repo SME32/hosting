@@ -24,7 +24,9 @@ body {
 #opciones ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 #opciones ul li {
   text-align: center;
@@ -50,7 +52,7 @@ body {
   height: 100px;
   display: flex;
   justify-content: center;
-  flex-direction: column
+  flex-direction: column;
 }
 img{
   border-radius: 50%;
@@ -93,14 +95,38 @@ ul li.activar a .text{
   transform: translateY(15px);
   opacity: 1;
 }
-
-button{
+#formulario{
+  display: flex;
+  flex-direction: column;
+}
+.but{
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
 }
-button:hover{
+.butn:hover{
   background-color: rgb(14, 84, 175);
   color: white;
   border: 2px solid rgb(0, 0, 255);
+}
+label{
+  margin: 5px 0;
+}
+input{
+  padding: 3px;
+  width: 82%;
+  border: 1px solid rgb(212, 212, 212);
+}
+#Corr{
+  margin-left: 10px;
+}
+#Env{
+  width: 100%;
+}
+#Env:hover{
+  opacity: 0.5;
+}
+textarea{
+  border: 1px solid rgb(212, 212, 212);
+  width: 100%;
 }
